@@ -48,25 +48,51 @@ body {
   font-family: "Helvetica";
   font-size: var(--font-vw);
   color: white;
-  line-height: 1.2;
 }
 .column span:last-child {
   font-family: "CodeLanguage2_1_Monospace", monospace;
   font-size: var(--font-vw);
   color: #00FF00;
-  line-height: 1.2;
 }
 .typed-row {
   margin-top: 20px;
-  width: 100%;
+  width: auto;
   text-align: center;
   justify-content: center;
   word-wrap: break-word;
   white-space: normal;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin: 0 16px;
 }
 .typed-letter-font {
 
   text-align: center;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#clear-btn, #backspace-btn {
+  font-family: "CodeLanguage2_1_Monospace", monospace;
+  font-size: var(--font-vw);
+  color: #00FF00;
+  background: black;
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  padding: 16px 24px 8px 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 8px;
+}
+
+#clear-btn:hover, #backspace-btn:hover {
+  background: #00FF00;
+  color: black;
 }

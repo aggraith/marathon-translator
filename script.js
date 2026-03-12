@@ -22,4 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
       typedRow.appendChild(letterElem);
     });
   });
+
+  // Backspace button logic
+  const backspaceBtn = document.getElementById('backspace-btn');
+  if (backspaceBtn) {
+    backspaceBtn.addEventListener('click', () => {
+      const letters = typedRow.querySelectorAll('.typed-letter-font');
+      if (letters.length > 0) {
+        typedRow.removeChild(letters[letters.length - 1]);
+      }
+    });
+  }
+
+  // Clear button logic
+  const clearBtn = document.getElementById('clear-btn');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      typedRow.innerHTML = '';
+    });
+  }
 });
