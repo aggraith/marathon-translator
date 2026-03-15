@@ -1,3 +1,21 @@
+#copy-btn {
+  font-family: "CodeLanguage2_1_Monospace", monospace;
+  font-size: var(--font-vw);
+  color: #00FF00;
+  background: black;
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  padding: 16px 24px 8px 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.copy-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
 :root {
   --font-vw: 2.2vw;
 }
@@ -91,8 +109,25 @@ body {
   transition: background 0.2s, color 0.2s;
   letter-spacing: 8px;
 }
+#copy-btn {
+  font-family: "CodeLanguage2_1_Monospace", monospace;
+  font-size: var(--font-vw);
+  color: #00FF00;
+  background: black;
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  padding: 16px 24px 8px 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
 
 #clear-btn:hover, #backspace-btn:hover {
   background: #00FF00;
   color: black;
-}
+  }
+
+  #copy-btn:hover {
+    background: #00FF00;
+    color: black;
+  }

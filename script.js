@@ -2,6 +2,22 @@
 // Makes second spans in each .column clickable and types out pressed character using font from first span
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Copy button logic
+    const copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        // Get all text from .typed-row, join, and remove line breaks
+        const letters = Array.from(typedRow.querySelectorAll('.typed-letter-font'));
+        let text = letters.map(span => span.textContent).join('');
+        text = text.replace(/[\r\n]+/g, '');
+        if (text.length > 0) {
+          navigator.clipboard.writeText(text).then(() => {
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => { copyBtn.textContent = 'Copy'; }, 1200);
+          });
+        }
+      });
+    }
   const grid = document.querySelector('.alphabet-grid');
   const columnsContainer = grid.querySelector('.columns-container');
   const typedRow = grid.querySelector('.typed-row');
