@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const rollEmbedUrl = [
     'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
     '?autoplay=1',
-    '&mute=1',
+    '&mute=0',
     '&rel=0',
     '&modestbranding=1',
     '&playsinline=1',
